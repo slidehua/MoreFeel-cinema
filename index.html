@@ -137,10 +137,11 @@ function buildCartridges(){
 const physicalRender=render;render=function(){physicalRender();buildCartridges()};
 const physicalOpen=openRoll;openRoll=function(s){document.querySelector('.vcan .physical')?.remove();physicalOpen(s);buildCartridges()};
 buildCartridges();
-</script></html>
+</script>
 
-<link rel="stylesheet" href="./cinema-community.css">
+<link rel="stylesheet" href="./cinema-community.css?v=20261117b">
 <div id="mf-community">
+<section id="mf-entrance" aria-label="电影院入场"><div class="mf-marquee">MORE FEEL <span>PRIVATE CINEMA</span></div><p class="mf-admit">一张电影票，一场属于我们的重逢</p><button id="mf-ticket" aria-label="点击电影票，准备入场"><img src="./cinema-ticket.png" alt="私人电影院电影票，火光中的两把绿色座椅"><span>点击票面 · 检票入场</span></button><div id="mf-admission" hidden><p>你的座位，一直为你保留。</p><button id="mf-enter">登录 / 注册 · 进入影院 ↗</button></div><small class="mf-ticket-footer">ADMIT ONE · THE MOMENTS STAY</small></section>
 <dialog id="mf-auth" aria-labelledby="mf-auth-title"><button type="button" class="mf-close" data-mf-close aria-label="关闭">×</button><h2 id="mf-auth-title">登录电影院</h2>
 <form id="mf-auth-form"><label>用户名<input id="mf-username" required minlength="4" maxlength="24" pattern="[a-zA-Z0-9][a-zA-Z0-9_.-]{3,23}" autocomplete="username" placeholder="4–24 位英文、数字、点、横线或下划线"></label>
 <label id="mf-register-fields" hidden>昵称<input id="mf-nickname" maxlength="20" autocomplete="nickname"></label>
@@ -149,5 +150,7 @@ buildCartridges();
 <button id="mf-logout" type="button" hidden>退出登录</button><p id="mf-auth-status" role="status" aria-live="polite"></p><p class="mf-muted">请保存好用户名和密码。此账号未绑定邮箱或手机号，忘记密码时请联系网站管理员。</p></dialog>
 <dialog id="mf-board" aria-labelledby="mf-board-title"><button type="button" class="mf-close" data-mf-close aria-label="关闭">×</button><h2 id="mf-board-title">散场后，留一句话</h2>
 <p id="mf-current" class="mf-muted">登录后即可留下你的留言。</p><form id="mf-note-form"><label for="mf-note-body">想留下的话（公开展示）</label><textarea id="mf-note-body" required maxlength="500" placeholder="那晚，最想记住的瞬间……"></textarea><button type="submit" id="mf-post">发布留言</button></form><p id="mf-note-status" role="status" aria-live="polite"></p>
-<div id="mf-messages"></div><p id="mf-list-status" role="status" aria-live="polite"></p><div class="mf-pagination"><button id="mf-prev" type="button" disabled>上一页</button><button id="mf-refresh" type="button">刷新</button><button id="mf-next" type="button" disabled>下一页</button></div></dialog>
-</div><script src="./supabase-2.49.8.js"></script><script src="./cinema-community.js"></script>
+<div class="mf-wall-heading"><span>THE ECHO WALL</span><h3>把回声，贴在这里。</h3><p>每一张便签，都是那晚真实的回响。</p></div><div id="mf-messages" aria-label="观众留言墙"></div><p id="mf-list-status" role="status" aria-live="polite"></p><div class="mf-pagination"><button id="mf-refresh" type="button">刷新</button></div></dialog>
+</div><script src="./supabase-2.49.8.js"></script><script src="./cinema-community.js?v=20261117b"></script>
+
+</html>
